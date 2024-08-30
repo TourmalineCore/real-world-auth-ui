@@ -1,0 +1,34 @@
+.tooltip {
+  $shadow-size: 20px;
+
+  position: relative;
+  border-radius: 2px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
+  background-color: var(--color-white);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 -4px 23px rgb(0 0 0 / 15%);
+    background-color: var(--color-white);
+    transform: translate(50%, -50%) rotate(-45deg);
+    clip-path:
+      polygon(
+        calc(20px * -1) calc(20px * -1),
+        calc(100% + 20px) calc(20px * -1),
+        calc(100% + 20px) calc(100% + 20px)
+      );
+
+    @include tablet-xl {
+      left: -15px;
+      top: 44px;
+      transform: translate(50%, -50%) rotate(224deg);
+    }
+  }
+}
