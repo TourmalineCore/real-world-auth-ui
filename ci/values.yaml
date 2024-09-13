@@ -39,8 +39,8 @@ service:
 
 ingress:
   enabled: true
-  hostname: "to-dos.tourmalinecore.com"
-  path: ""
+  hostname: "real-world.tourmalinecore.com"
+  path: "auth"
   annotations:
       cert-manager.io/cluster-issuer: letsencrypt 
       nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
