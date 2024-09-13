@@ -3,7 +3,7 @@
 image:
   registry: ghcr.io
   repository: tourmalinecore/real-world-auth-ui
-  tag: ""
+  tag: "latest"
   pullPolicy: Always
   debug: true
 
@@ -87,4 +87,3 @@ extraDeploy:
       {{- if .Values.extraConfigMapEnvVars }}
       {{- include "common.tplvalues.render" ( dict "value" .Values.extraConfigMapEnvVars "context" $ ) | trim | nindent 6 }}
       {{- end }}
- 
