@@ -1,0 +1,73 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-error: #da2228;
+  --color-text: #838383;
+  --color-accent-first: #0c8bb4;
+  --color-accent-last: #f53893;
+  --color-link: var(--color-accent-first);
+  --color-copyright-link: var(--color-accent-last);
+  --accent-gradient-color-1: #fff0fc;
+  --accent-gradient-color-2: #eceaff;
+  --accent-gradient-color-3: #e1f1ff;
+  --auth-bg-accent-color-first: #81b4ff;
+  --auth-bg-accent-color-last: #ffc1ee;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background-img-page {
+  background-image:
+    url("../assets/img/icon-top-cirlce.svg"),
+    url("../assets/img/icon-bottom-right-circle.svg"),
+    url("../assets/img/icon-bottom-left-circle.svg");
+  background-position:
+    100% 0,
+    40px 100%,
+    0 100%;
+  background-size:
+    100px,
+    400px,
+    250px;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+  @include tablet {
+    background-size:
+      20%,
+      70%,
+      40%;
+  }
+
+  @include tablet-xl {
+    background-size:
+      20%,
+      100%,
+      70%;
+  }
+
+  @include desktop-xl {
+    background-size:
+      20%,
+      94%,
+      50%;
+  }
+
+  @media (max-width: 1919px) and (min-width: 1440px) {
+    background-size:
+      10%,
+      80%,
+      50%;
+  }
+}

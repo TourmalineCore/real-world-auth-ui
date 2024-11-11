@@ -1,0 +1,146 @@
+.input {
+  $this: &;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__control {
+    outline: none;
+    border: none;
+    border-radius: 34px;
+    padding: 16px 56px;
+    width: 100%;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: 1.1;
+    color: inherit;
+    background-color: #e6f2f480;
+    transition: all 0.3s;
+
+    @include tablet-xl {
+      padding-left: 72px;
+    }
+
+    @include desktop-xl {
+      padding: 22px 80px;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    transform: translateY(-50%);
+
+    @include tablet-xl {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include desktop-xl {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  &__action-button {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    outline: none;
+    border: none;
+    padding: 0;
+    color: var(--color-text);
+    background-color: transparent;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    svg {
+      display: block;
+      width: 21px;
+      height: 16px;
+
+      @include tablet-xl {
+        right: 24px;
+        width: 28px;
+        height: 20px;
+      }
+
+      @include desktop-xl {
+        width: 36px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__domain {
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    color: var(--color-black);
+    background: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: #c2c2c2;
+    }
+
+    @include tablet-xl {
+      right: 16px;
+      top: 16px;
+    }
+
+    @include desktop-xl {
+      right: 24px;
+      top: 18px;
+    }
+  }
+
+  &--reset {
+    padding: 16px 205px 16px 56px;
+
+    @include tablet-xl {
+      padding-right: 240px;
+      padding-left: 72px;
+    }
+
+    @include desktop-xl {
+      padding: 22px 290px 22px 80px;
+    }
+  }
+
+  &--password {
+    #{$this}__control {
+      position: relative;
+    }
+  }
+
+  @include tablet-xl {
+    font-size: 17px;
+  }
+
+  @include desktop-xl {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+}

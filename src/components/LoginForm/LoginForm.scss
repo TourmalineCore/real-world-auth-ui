@@ -1,0 +1,159 @@
+.login-form {
+  $this: &;
+
+  display: flex;
+  overflow-x: hidden;
+  height: 100vh; /* ie11 fallback */
+  height: calc(var(--vh, 1vh) * 100);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.1;
+
+  &__back-link {
+    display: block;
+    margin-bottom: 53px;
+
+    @include tablet-xl {
+      position: absolute;
+      left: 24px;
+      top: 24px;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    @include desktop-xl {
+      left: 30px;
+      top: 30px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 56px;
+    height: 42px;
+
+    @include tablet-xl {
+      margin-bottom: 40px;
+      height: 52px;
+    }
+
+    @include desktop-xl {
+      height: 64px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-weight: inherit;
+    font-size: 24px;
+    color: var(--color-black);
+
+    @include tablet-xl {
+      font-size: 32px;
+    }
+
+    @include desktop-xl {
+      margin-bottom: 16px;
+      font-size: 45px;
+    }
+  }
+
+  &__login {
+    display: block;
+    color: var(--color-black);
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+    font-weight: inherit;
+    font-size: inherit;
+    color: var(--color-text);
+
+    @include tablet-xl {
+      margin-bottom: 64px;
+    }
+
+    @include desktop-xl {
+      margin-bottom: 76px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    margin: auto;
+    padding: 0 24px;
+    width: 100%;
+    max-width: 424px;
+
+    @include tablet-xl {
+      position: relative;
+      margin: auto;
+      border-radius: 40px;
+      padding: 48px 80px;
+      width: 100%;
+      max-width: 550px;
+      box-shadow: 1px 4px 25px rgb(95 108 114 / 20%);
+      font-size: 20px;
+      line-height: 1.15;
+      background-color: var(--color-white);
+    }
+
+    @include desktop-xl {
+      padding: 72px 130px 80px;
+      max-width: 772px;
+    }
+  }
+
+  &__form {
+    font-size: 15px;
+    line-height: 1.1;
+
+    @include desktop-xl {
+      font-size: 20px;
+    }
+
+    @include tablet-xl {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+  }
+
+  &__messages-box {
+    margin-top: 16px;
+    min-height: 48px;
+    font-size: 15px;
+    line-height: 1.1;
+
+    @include desktop-xl {
+      margin-top: 40px;
+      min-height: 84px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  }
+
+  &__submit-btn-wrapper {
+    margin-top: 152px;
+
+    @include tablet-xl {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 108px;
+    }
+
+    @include desktop-xl {
+      margin-top: 128px;
+    }
+  }
+
+  @include tablet-xl {
+    font-size: 20px;
+    background-image: none;
+  }
+
+  @include desktop-xl {
+    font-size: 26px;
+  }
+}
